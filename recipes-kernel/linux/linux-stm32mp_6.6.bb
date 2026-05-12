@@ -14,13 +14,9 @@ LINUX_SUBVERSION = ".116"
 LINUX_TARBASE = "linux-${LINUX_VERSION}${LINUX_SUBVERSION}"
 LINUX_TARNAME = "${LINUX_TARBASE}.tar.xz"
 
-SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v6.x/${LINUX_TARNAME};name=kernel"
-
-SRC_URI[kernel.sha256sum] = "a9a59742c29be284c205dc87cbe9b065f9688488132c8f5a6057a5539230a51d"
-
-SRC_URI += " \
-    file://${LINUX_VERSION}/${LINUX_VERSION}${LINUX_SUBVERSION}/0001-v6.6-stm32mp-r3.patch \
-    "
+KERNEL_SRC_URI ?= "git://github.com/BackburnerLabs/st-linux.git;protocol=https;branch=myd-lf25x-v6.6-stm32mp"
+SRC_URI = "${KERNEL_SRC_URI}"
+SRCREV = "ef7e42de6886423f8cdf968f6801d93b39807643"
 
 LINUX_TARGET = "stm32mp"
 LINUX_RELEASE = "r3"
@@ -32,7 +28,8 @@ ARCHIVER_ST_REVISION = "v${LINUX_VERSION}-${LINUX_TARGET}-${LINUX_RELEASE}"
 ARCHIVER_COMMUNITY_BRANCH = "linux-${LINUX_VERSION}.y"
 ARCHIVER_COMMUNITY_REVISION = "v${LINUX_VERSION}${LINUX_SUBVERSION}"
 
-S = "${WORKDIR}/${LINUX_TARBASE}"
+#S = "${WORKDIR}/${LINUX_TARBASE}"
+S = "${WORKDIR}/git"
 
 # ---------------------------------
 # Configure devupstream class usage
@@ -60,7 +57,8 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'linux-stm32mp
 # -------------------------------------------------------------
 # Defconfig
 #
-KERNEL_DEFCONFIG        = "defconfig"
+#KERNEL_DEFCONFIG        = "defconfig"
+KERNEL_DEFCONFIG        = "myd_stm32mp257x_defconfig"
 KERNEL_CONFIG_FRAGMENTS:arm = " \
     ${@bb.utils.contains('KERNEL_DEFCONFIG', 'defconfig', '${S}/arch/arm/configs/fragment-01-multiv7_cleanup.config', '', d)} \
     ${@bb.utils.contains('KERNEL_DEFCONFIG', 'defconfig', '${S}/arch/arm/configs/fragment-02-multiv7_addons.config', '', d)} \

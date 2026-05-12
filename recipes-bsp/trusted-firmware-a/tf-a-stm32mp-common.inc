@@ -9,12 +9,8 @@ CVE_PRODUCT = "arm:arm-trusted-firmware \
                arm:arm_trusted_firmware \
                arm_trusted_firmware_project:arm_trusted_firmware"
 
-SRC_URI = "git://git.trustedfirmware.org/TF-A/trusted-firmware-a.git;protocol=https;branch=lts-v2.10"
-SRCREV = "a07367a19a09d3c6c426446dd408d7e522ac068b"
-
-SRC_URI += " \
-    file://0001-v2.10-stm32mp-r3.patch \
-     "
+SRC_URI = "git://github.com/BackburnerLabs/arm-trusted-firmware.git;protocol=https;branch=myd-lf25x-v2.10"
+SRCREV = "e76e4edbff31b0d27a263d8b987718d0bf9ff6d9"
 
 TF_A_VERSION = "v2.10"
 TF_A_SUBVERSION = ".24"

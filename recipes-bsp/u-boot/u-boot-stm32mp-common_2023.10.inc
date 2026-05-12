@@ -12,12 +12,8 @@ DEPENDS += "dtc-native bc-native"
 DEPENDS += "flex-native bison-native"
 DEPENDS += "python3-setuptools-native"
 
-SRC_URI = "git://github.com/u-boot/u-boot.git;protocol=https;branch=master"
-SRCREV  = "4459ed60cb1e0562bc5b40405e2b4b9bbf766d57"
-
-SRC_URI += "\
-    file://0001-v2023.10-stm32mp-r3.patch \
-    "
+SRC_URI = "git://github.com/BackburnerLabs/st-u-boot.git;protocol=https;branch=myd-lf25x-v2023.10"
+SRCREV  = "64867d457ee5246523b9cafd552adc1e264bc119"
 
 # debug and trace
 SRC_URI += " ${@bb.utils.contains('ST_UBOOT_DEBUG_TRACE', '1', '', 'file://0098-silent_mode.patch', d)} "

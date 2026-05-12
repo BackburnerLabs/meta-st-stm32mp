@@ -17,7 +17,7 @@ UBOOT_EXTLINUX_SPLASH:stm32mp2m33tdcommon ?= "${@bb.utils.contains('MACHINE_FEAT
 
 UBOOT_EXTLINUX_KERNEL_ARGS ?= "rootwait rw"
 UBOOT_EXTLINUX_KERNEL_ARGS:append = " ${@bb.utils.contains('ST_DEBUG_TRACE', '1', '', '${ST_CMD_LINE_DEBUG_TRACE}', d)} "
-UBOOT_EXTLINUX_KERNEL_ARGS:append:stm32mp2common = " earlycon"
+UBOOT_EXTLINUX_KERNEL_ARGS:append:stm32mp2common = " earlyprintk earlycon loglevel=${loglevel}"
 
 # -----------------------------------------------------------------------------
 # Configurations
@@ -69,6 +69,21 @@ UBOOT_EXTLINUX_MENU_DESCRIPTION:rootfs = "OpenSTLinux"
 # the 'newlabel1' and 'newlabel2' labels.
 # -----------------------------------------------------------------------------
 # Define additional extra targets to consider
+
+UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG[myb-stm32mp257x-2GB] += "myb-stm32mp257x-2GB"
+UBOOT_EXTLINUX_DEFAULT_LABEL:myb-stm32mp257x-2GB = "myb-stm32mp257x-2GB"
+UBOOT_EXTLINUX_FDT:myb-stm32mp257x-2GB = "/myb-stm32mp257x-2GB.dtb"
+
+UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG[myb-stm32mp257x-2GB] += "myb-stm32mp257x-2GB-ethswitch"
+UBOOT_EXTLINUX_FDT:myb-stm32mp257x-2GB-ethswitch = "/myb-stm32mp257x-2GB-ethswitch.dtb"
+
+UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG[myb-stm32mp257x-1GB] += "myb-stm32mp257x-1GB"
+UBOOT_EXTLINUX_DEFAULT_LABEL:myb-stm32mp257x-1GB = "myb-stm32mp257x-1GB"
+UBOOT_EXTLINUX_FDT:myb-stm32mp257x-1GB = "/myb-stm32mp257x-1GB.dtb"
+
+UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG[myb-stm32mp257x-1GB] += "myb-stm32mp257x-1GB-ethswitch"
+UBOOT_EXTLINUX_FDT:myb-stm32mp257x-1GB-ethswitch = "/myb-stm32mp257x-1GB-ethswitch.dtb"
+
 UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG:target-sdcard += "${STM32MP_DT_FILES_SDCARD}"
 UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG:target-emmc += "${STM32MP_DT_FILES_EMMC}"
 UBOOT_EXTLINUX_TARGETS_EXTRA_CONFIG:target-nand += "${STM32MP_DT_FILES_NAND}"
