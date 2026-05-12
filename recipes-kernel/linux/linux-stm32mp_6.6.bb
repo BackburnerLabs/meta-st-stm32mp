@@ -16,7 +16,7 @@ LINUX_TARNAME = "${LINUX_TARBASE}.tar.xz"
 
 KERNEL_SRC_URI ?= "git://github.com/BackburnerLabs/st-linux.git;protocol=https;branch=myd-lf25x-v6.6-stm32mp"
 SRC_URI = "${KERNEL_SRC_URI}"
-SRCREV = "ef7e42de6886423f8cdf968f6801d93b39807643"
+SRCREV = "0f07151dd74a0d36915d4303c95dbc0727a808c3"
 
 LINUX_TARGET = "stm32mp"
 LINUX_RELEASE = "r3"

@@ -3,15 +3,8 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/optee-os-stm32mp:"
 LICENSE = "BSD-2-Clause & BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=c1f21c4f72f372ef38a5a4aee55ec173"
 
-SRC_URI = "git://github.com/OP-TEE/optee_os.git;protocol=https;branch=master"
-SRCREV = "2a5b1d1232f582056184367fb58a425ac7478ec6"
-
-SRC_URI += " \
-    file://fonts.tar.gz;subdir=git;name=fonts \
-    file://0001-4.0.0-stm32mp-r3.patch \
-    "
-
-SRC_URI[fonts.sha256sum] = "4941e8bb6d8ac377838e27b214bf43008c496a24a8f897e0b06433988cbd53b2"
+SRC_URI = "git://github.com/BackburnerLabs/st_optee_os.git;protocol=https;branch=myd-lf25x-4.0.0-stm32mp-r3"
+SRCREV = "4c108f2d5116758d1599873b5836048cb91722e0"
 
 OPTEE_VERSION = "4.0.0"
 OPTEE_SUBVERSION = "stm32mp"
