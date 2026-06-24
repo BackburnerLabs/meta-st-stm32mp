@@ -3,8 +3,8 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/optee-os-stm32mp:"
 LICENSE = "BSD-2-Clause & BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=c1f21c4f72f372ef38a5a4aee55ec173"
 
-SRC_URI = "git://github.com/BackburnerLabs/st_optee_os.git;protocol=https;branch=myd-lf25x-4.0.0-stm32mp-r3"
-SRCREV = "4c108f2d5116758d1599873b5836048cb91722e0"
+SRC_URI = "git://github.com/BackburnerLabs/st_optee_os.git;protocol=https;branch=savers-4.0.0-stm32mp-r3"
+SRCREV = "8a3a6715ef199a1b6833635df6eb6535b2806e05"
 
 OPTEE_VERSION = "4.0.0"
 OPTEE_SUBVERSION = "stm32mp"

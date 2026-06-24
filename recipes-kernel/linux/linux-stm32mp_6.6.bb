@@ -14,9 +14,9 @@ LINUX_SUBVERSION = ".116"
 LINUX_TARBASE = "linux-${LINUX_VERSION}${LINUX_SUBVERSION}"
 LINUX_TARNAME = "${LINUX_TARBASE}.tar.xz"
 
-KERNEL_SRC_URI ?= "git://github.com/BackburnerLabs/st-linux.git;protocol=https;branch=myd-lf25x-v6.6-stm32mp"
+KERNEL_SRC_URI ?= "git://github.com/BackburnerLabs/st-linux.git;protocol=https;branch=savers-v6.6-stm32mp"
 SRC_URI = "${KERNEL_SRC_URI}"
-SRCREV = "0f07151dd74a0d36915d4303c95dbc0727a808c3"
+SRCREV = "b43e2f136be6731c6d0bb0e69c1c7d2cb2c35414"
 
 LINUX_TARGET = "stm32mp"
 LINUX_RELEASE = "r3"
