@@ -13,7 +13,7 @@ DEPENDS += "flex-native bison-native"
 DEPENDS += "python3-setuptools-native"
 
 SRC_URI = "git://github.com/BackburnerLabs/st-u-boot.git;protocol=https;branch=savers-v2023.10"
-SRCREV  = "f8b2da4e22c2d622ebfb0890a2d1298ad6c5136e"
+SRCREV  = "514da520703e6abd51b5b627efb73167ce0ffd9c"
 
 # debug and trace
 SRC_URI += " ${@bb.utils.contains('ST_UBOOT_DEBUG_TRACE', '1', '', 'file://0098-silent_mode.patch', d)} "
