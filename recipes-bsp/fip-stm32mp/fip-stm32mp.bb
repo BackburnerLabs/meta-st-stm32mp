@@ -120,6 +120,7 @@ do_deploy() {
                         \n--output ${DEPLOYDIR}/${FIP_DIR_FIP}"
                     echo "********************************************"
                     FIP_DEPLOYDIR_ROOT="${RECIPE_SYSROOT}" \
+                    FIP_DEPLOYDIR_FIP="${DEPLOYDIR}/${FIP_DIR_FIP}" \
                     ${FIP_WRAPPER} \
                         ${FIP_PARAM_BLxx} \
                         ${FIP_PARAM_SIGN} \
@@ -151,6 +152,7 @@ do_deploy() {
                     \n--output ${DEPLOYDIR}/${FIP_DIR_FIP}"
             echo "****************************************"
             FIP_DEPLOYDIR_ROOT="${RECIPE_SYSROOT}" \
+            FIP_DEPLOYDIR_FIP="${DEPLOYDIR}/${FIP_DIR_FIP}" \
             ${FIP_WRAPPER} \
                     ${FIP_PARAM_BLxx} \
                     ${FIP_PARAM_SIGN} \
