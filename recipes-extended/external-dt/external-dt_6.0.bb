@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0-only;md5=801f80980d171d
 
 EXTDTB_SRC_URI ?= "git://github.com/BackburnerLabs/dt-stm32mp.git;protocol=https;branch=savers-v6-stm32mp"
 SRC_URI = "${EXTDTB_SRC_URI}"
-SRCREV = "f70a237f4e7955644f8f2d6750d7847d7528778c"
+SRCREV = "8c0c8cfe4169de35222b6814d1cc397a8e266a3e"
 
 S = "${WORKDIR}/git"
 
