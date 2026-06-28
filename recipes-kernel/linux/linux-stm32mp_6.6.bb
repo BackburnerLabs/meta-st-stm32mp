@@ -16,7 +16,7 @@ LINUX_TARNAME = "${LINUX_TARBASE}.tar.xz"
 
 KERNEL_SRC_URI ?= "git://github.com/BackburnerLabs/st-linux.git;protocol=https;branch=savers-v6.6-stm32mp"
 SRC_URI = "${KERNEL_SRC_URI}"
-SRCREV = "739d12b683eec211a3b1981ce1b6633b2c3b0a04"
+SRCREV = "43c6a3d5c5444ca6e03dcdfaea28219e683083f6"
 
 LINUX_TARGET = "stm32mp"
 LINUX_RELEASE = "r3"

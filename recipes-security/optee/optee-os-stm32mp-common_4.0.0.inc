@@ -4,7 +4,7 @@ LICENSE = "BSD-2-Clause & BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=c1f21c4f72f372ef38a5a4aee55ec173"
 
 SRC_URI = "git://github.com/BackburnerLabs/st_optee_os.git;protocol=https;branch=savers-4.0.0-stm32mp-r3"
-SRCREV = "fde506a119aa2cee8645dc1afbd3a9b13c8bbc1f"
+SRCREV = "af7f686a31ee27b94055fe0c37ba8d17364dbd01"
 
 OPTEE_VERSION = "4.0.0"
 OPTEE_SUBVERSION = "stm32mp"
