@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=599d2d1ee7fc84c0467b3d19801db870"
 
 require openocd-stm32mp.inc
 
-SRC_URI = "git://github.com/openocd-org/openocd.git;protocol=https;branch=master;name=openocd "
+SRC_URI = "git://github.com/openocd-org/openocd.git;protocol=https;branch=master;name=openocd"
 
 SRCREV_FORMAT = "openocd"
 SRCREV_openocd = "6554d176e926e1e46b90e1b00d1b3ed1bd20b9ff"
